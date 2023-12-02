@@ -42,6 +42,13 @@
         </nav>
 
     </header>
+    <?php
+        require_once 'connection.php';
+
+        $sql = "select count(ma_tloai) from theloai";
+        $result = mysqli_query($connection, $sql);
+        $num = mysqli_fetch_array($result)['count(ma_tloai)'];
+    ?>
     <main class="container mt-5 mb-5">
         <!-- <h3 class="text-center text-uppercase mb-3 text-primary">CẢM NHẬN VỀ BÀI HÁT</h3> -->
         <div class="row">
@@ -51,7 +58,6 @@
                         <h5 class="card-title text-center">
                             <a href="" class="text-decoration-none">Người dùng</a>
                         </h5>
-
                         <h5 class="h1 text-center">
                             110
                         </h5>
@@ -65,9 +71,8 @@
                         <h5 class="card-title text-center">
                             <a href="" class="text-decoration-none">Thể loại</a>
                         </h5>
-
                         <h5 class="h1 text-center">
-                            10
+                            <?php echo $num  ?>
                         </h5>
                     </div>
                 </div>
@@ -79,7 +84,6 @@
                         <h5 class="card-title text-center">
                             <a href="" class="text-decoration-none">Tác giả</a>
                         </h5>
-
                         <h5 class="h1 text-center">
                             20
                         </h5>

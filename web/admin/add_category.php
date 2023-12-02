@@ -22,7 +22,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="./">Trang chủ</a>
+                        <a class="nav-link" aria-current="page" href="">Trang chủ</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../index.php">Trang ngoài</a>
@@ -49,8 +49,8 @@
                 <h3 class="text-center text-uppercase fw-bold">Thêm mới thể loại</h3>
                 <form action="process_add_category.php" method="post">
                     <div class="input-group mt-3 mb-3">
-                        <span class="input-group-text" id="lblCatName">Tên thể loại</span>
-                        <input type="text" class="form-control" name="txtCatName" >
+                        <span class="input-group-text" id="text" name="">Tên thể loại</span>
+                        <input type="text" class="form-control" name="ten_tloai" >
                     </div>
 
                     <div class="form-group  float-end ">

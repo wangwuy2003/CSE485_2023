@@ -12,6 +12,10 @@
     $sql2 = "select count(ma_bviet) from baiviet";
     $result2 = mysqli_query($connection, $sql2);
     $num2 = mysqli_fetch_array($result2)['count(ma_bviet)'];
+
+    $sql3 = "select count(id) from users";
+    $result3 = mysqli_query($connection, $sql3);
+    $num3 = mysqli_fetch_array($result3)['count(id)'];
 ?>
 <main class="container mt-5 mb-5">
     <!-- <h3 class="text-center text-uppercase mb-3 text-primary">CẢM NHẬN VỀ BÀI HÁT</h3> -->
@@ -23,7 +27,7 @@
                         <a href="" class="text-decoration-none">Người dùng</a>
                     </h5>
                     <h5 class="h1 text-center">
-                        110
+                        <?php echo $num3 ?>
                     </h5>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 <?php
-    require_once 'connection.php';
+    require_once '../connection.php';
 
     $name = $_POST['ten_tloai'];
 
@@ -7,5 +7,5 @@
 
     mysqli_query($connection, $sql);
 
-    header('location:category.php');
+    header('location:index.php');
 

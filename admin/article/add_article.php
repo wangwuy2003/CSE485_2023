@@ -15,7 +15,7 @@
             <form action="process_add_article.php" method="post">
                 <div class="input-group mt-3 mb-3">
                     <span class="input-group-text" id="text" name="">Tiêu đề</span>
-                    <input type="text" class="form-control" name="tieude" >
+                    <input type="text" class="form-control" name="tieude" required>
                 </div>
 
                 <div class="input-group mt-3 mb-3">
@@ -88,3 +88,4 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
+

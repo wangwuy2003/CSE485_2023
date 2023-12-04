@@ -7,12 +7,12 @@
 
     $sql = "select * from users where (username = '$user' OR email='$user')";
     $result = mysqli_query($connection, $sql);
-    $number_row = mysqli_fetch_array($result);
+    $number_row = mysqli_num_rows($result);
 
-    if ($number_row > 0) {
+    if ($number_row === 1) {
         session_start();
-        $pass_saved = $number_row['password'];
         $each = mysqli_fetch_array($result);
+        $pass_saved = $each['password'];
         $id = $each['id'];
         if (password_verify($password, $pass_saved)) {
             $_SESSION['id'] = $id;

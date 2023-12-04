@@ -21,12 +21,12 @@
                 <input type="hidden" name="ma_bviet" value="<?php echo $each['ma_bviet'] ?>">
                 <div class="input-group mt-3 mb-3">
                     <span class="input-group-text" id="text" name="">Tiêu đề</span>
-                    <input type="text" class="form-control" name="tieude" value="<?php echo $each['tieude'] ?>">
+                    <input type="text" class="form-control" name="tieude" value="<?php echo $each['tieude'] ?>" required>
                 </div>
 
                 <div class="input-group mt-3 mb-3">
                     <span class="input-group-text" id="text" name="">Tên bài hát</span>
-                    <input type="text" class="form-control" name="ten_bhat" value="<?php echo $each['ten_bhat'] ?>">
+                    <input type="text" class="form-control" name="ten_bhat" value="<?php echo $each['ten_bhat'] ?>" required>
                 </div>
 
                 <div class="input-group mt-3 mb-3">
@@ -50,7 +50,7 @@
                 <div class="input-group mt-3 mb-3">
                     <span class="input-group-text" id="text" name="">Tóm tắt</span>
                     <div class="form-floating">
-                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" name="tomtat">
+                        <textarea style="height: 140px" class="form-control" placeholder="Leave a comment here" id="floatingTextarea" name="tomtat">
                             <?php echo $each['tomtat'] ?>
                         </textarea>
                     </div>
@@ -59,7 +59,7 @@
                 <div class="input-group mt-3 mb-3">
                     <span class="input-group-text" id="text" name="">Nội dung</span>
                     <div class="form-floating">
-                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" name="noidung">
+                        <textarea style="height: 140px"  class="form-control" placeholder="Leave a comment here" id="floatingTextarea" name="noidung">
                             <?php echo $each['noidung'] ?>
                         </textarea>
                     </div>

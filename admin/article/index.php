@@ -20,10 +20,8 @@
                     <th scope="col">Tiêu đề</th>
                     <th scope="col">Tên bài hát</th>
                     <th scope="col">Thể loại</th>
-                    <th scope="col">Tóm tắt</th>
                     <th scope="col">Nội dung</th>
                     <th scope="col">Tác giả</th>
-                    <th scope="col">Ngày viết</th>
                     <th scope="col">Hình ảnh</th>
                     <th>Sửa</th>
                     <th>Xóa</th>
@@ -36,14 +34,12 @@
                         <td><?php echo $each['tieude'] ?></td>
                         <td><?php echo $each['ten_bhat'] ?></td>
                         <td><?php echo $each['tentl'] ?></td>
-                        <td><?php echo $each['tomtat'] ?></td>
                         <td>
                             <a href="detail.php">
-                                Xem chi tiết
+                                <i class="fa-solid fa-eye" style="color: #209257;"></i>
                             </a>
                         </td>
                         <td><?php echo $each['tentg'] ?></td>
-                        <td><?php echo $each['ngayviet'] ?></td>
                         <td>
                             <img src="<?php echo $each['hinhanh'] ?>" width="100">
                         </td>
@@ -51,7 +47,7 @@
                             <a href="edit_article.php?id=<?php echo $each['ma_bviet'] ?>"><i class="fa-solid fa-pen-to-square"></i></a>
                         </td>
                         <td>
-                            <a href="delete_article.php?id=<?php echo $each['ma_bviet'] ?>"><i class="fa-solid fa-trash"></i></a>
+                            <a href="delete_article.php?id=<?php echo $each['ma_bviet'] ?>"><i class="fa-solid fa-trash" style="color: #ff4d4d;"></i></a>
                         </td>
                     </tr>
                 <?php endforeach; ?>

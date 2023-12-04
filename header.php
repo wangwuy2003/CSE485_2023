@@ -32,13 +32,17 @@
                         <?php
                             session_start();
                             if(isset($_SESSION['name'])){
-                                echo 'Xin chào' . $_SESSION['name'];
-                                print_r($_SESSION['name']);
+                                echo 'Xin chào ' . $_SESSION['name'];
+                                echo '
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="signout.php">Thoát</a>
+                                    </li>
+                                    ';
+                            }
+                            else {
+                                echo '<a class="nav-link" href="./login.php">Đăng nhập</a>';
                             }
                         ?>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./login.php">Đăng nhập</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">

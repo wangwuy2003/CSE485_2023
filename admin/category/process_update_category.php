@@ -4,12 +4,10 @@
     $id = $_POST['ma_tloai'];
     $name = $_POST['ten_tloai'];
 
-    $sql = "update theloai 
-    set
-    ten_tloai = '$name'
-    where ma_tloai = $id";
+    $sql = "update theloai set ten_tloai = ? where ma_tloai = ?";
 
-    mysqli_query($connection, $sql);
+    $stmt = $db->prepare($sql);
+    $stmt->execute([$name, $id]);
     header('location:index.php');
 
 

@@ -3,6 +3,7 @@
 
     $id = $_GET['id'];
 
-    $sql = "delete from baiviet where ma_bviet = $id";
-    mysqli_query($connection, $sql);
+    $sql = "delete from baiviet where ma_bviet = ?";
+    $stmt = $db->prepare($sql);
+    $stmt->execute([$id]);
     header('location: index.php');

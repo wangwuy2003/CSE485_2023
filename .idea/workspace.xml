@@ -5,13 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="864abe16-955b-4df3-9cc4-24a8692adb12" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/signout.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/article/add_article.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/article/add_article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/article/delete_article.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/article/delete_article.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/article/edit_article.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/article/edit_article.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/article/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/article/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/article/process_add_article.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/article/process_add_article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/article/process_update_article.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/article/process_update_article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/author/delete_author.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/author/delete_author.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/author/edit_author.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/author/edit_author.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/author/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/author/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/author/process_add_author.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/author/process_add_author.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/author/process_author.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/author/process_author.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/category/delete_category.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/category/delete_category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/category/edit_category.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/category/edit_category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/category/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/category/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/category/process_add_category.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/category/process_add_category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/category/process_update_category.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/category/process_update_category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/connection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/root/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/root/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/connection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/detail.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/process_login.php" beforeDir="false" afterPath="$PROJECT_DIR$/process_login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signout.php" beforeDir="false" afterPath="$PROJECT_DIR$/signout.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,8 +65,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "NguyenQuangHuy",
-    "last_opened_file_path": "E:/laragon/www/CSE485_2023_test",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "E:/laragon/www/CSE485_2023",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -89,6 +108,11 @@
       <workItem from="1701597039561" duration="1838000" />
       <workItem from="1701607006878" duration="18000" />
       <workItem from="1701702210521" duration="2876000" />
+      <workItem from="1701756601423" duration="6360000" />
+      <workItem from="1701763196047" duration="1117000" />
+      <workItem from="1701791350455" duration="41000" />
+      <workItem from="1701791402790" duration="206000" />
+      <workItem from="1701791626893" duration="7775000" />
     </task>
     <servers />
   </component>

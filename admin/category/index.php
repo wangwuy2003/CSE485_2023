@@ -1,9 +1,10 @@
 <?php
-
+    global $db;
     require '../connection.php';
     include "../header.php";
     $sql = "select * from theloai";
-    $result = mysqli_query($connection, $sql);
+    $stmt = $db->query($sql);
+    $result = $stmt->fetchAll();
 ?>
 
 <main class="container mt-5 mb-5">

@@ -5,7 +5,8 @@
     $sql = "select baiviet.*, theloai.ten_tloai as tentl, tacgia.ten_tgia as tentg from baiviet 
             inner join theloai on baiviet.ma_tloai = theloai.ma_tloai
             inner join tacgia on tacgia.ma_tgia = baiviet.ma_tgia";
-    $result = mysqli_query($connection, $sql);
+    $stmt = $db->query($sql);
+    $result = $stmt->fetchAll();
 ?>
 
 <main class="container mt-5 mb-5">
@@ -22,7 +23,6 @@
                     <th scope="col">Thể loại</th>
                     <th scope="col">Nội dung</th>
                     <th scope="col">Tác giả</th>
-                    <th scope="col">Hình ảnh</th>
                     <th>Sửa</th>
                     <th>Xóa</th>
                 </tr>
@@ -40,9 +40,6 @@
                             </a>
                         </td>
                         <td><?php echo $each['tentg'] ?></td>
-                        <td>
-                            <img src="<?php echo $each['hinhanh'] ?>" width="100">
-                        </td>
                         <td>
                             <a href="edit_article.php?id=<?php echo $each['ma_bviet'] ?>"><i class="fa-solid fa-pen-to-square"></i></a>
                         </td>

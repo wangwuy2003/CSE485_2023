@@ -1,21 +1,26 @@
 <?php
+    session_start();
+    if(!isset($_SESSION['id'])){
+        header('Location:../../index.php');
+        exit(1);
+    }
     require_once '../connection.php';
     include "../header.php";
-    $sql = "select count(ma_tloai) from theloai";
-    $result = mysqli_query($connection, $sql);
-    $num = mysqli_fetch_array($result)['count(ma_tloai)'];
+    $sql = "select * from theloai";
+    $stmt = $db->query($sql);
+    $num = $stmt->rowCount();
 
-    $sql1 = "select count(ma_tgia) from tacgia";
-    $result1 = mysqli_query($connection, $sql1);
-    $num1 = mysqli_fetch_array($result1)['count(ma_tgia)'];
+    $sql1 = "select * from tacgia";
+    $stmt1 = $db->query($sql1);
+    $num1 = $stmt1->rowCount();
 
-    $sql2 = "select count(ma_bviet) from baiviet";
-    $result2 = mysqli_query($connection, $sql2);
-    $num2 = mysqli_fetch_array($result2)['count(ma_bviet)'];
+    $sql2 = "select * from baiviet";
+    $stmt2 = $db->query($sql2);
+    $num2 = $stmt2->rowCount();
 
-    $sql3 = "select count(id) from users";
-    $result3 = mysqli_query($connection, $sql3);
-    $num3 = mysqli_fetch_array($result3)['count(id)'];
+    $sql3 = "select * from users";
+    $stmt3 = $db->query($sql3);
+    $num3 = $stmt3->rowCount();
 ?>
 <main class="container mt-5 mb-5">
     <!-- <h3 class="text-center text-uppercase mb-3 text-primary">CẢM NHẬN VỀ BÀI HÁT</h3> -->

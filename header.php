@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,22 +31,31 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="./">Trang chủ</a>
                     </li>
-                    <li class="nav-item">
-                        <?php
-                            session_start();
-                            if(isset($_SESSION['name'])){
-                                echo 'Xin chào ' . $_SESSION['name'];
-                                echo '
-                                    <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="signout.php">Thoát</a>
-                                    </li>
-                                    ';
-                            }
-                            else {
-                                echo '<a class="nav-link" href="./login.php">Đăng nhập</a>';
-                            }
-                        ?>
-                    </li>
+                    <?php if(isset($_SESSION['id'])): ?>
+                        <?php if($_SESSION['level'] === 1): ?>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="admin/root">
+                                    Quản lý
+                                </a>
+                            </li>
+                        <?php endif; ?>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <?php echo $_SESSION['name'] ?>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="signout.php">
+                                Đăng xuất
+                            </a>
+                        </li>
+                        <?php else: ?>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="login.php">
+                                    Đăng nhập
+                                </a>
+                            </li>
+                    <?php endif; ?>
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Nội dung cần tìm" aria-label="Search">

@@ -2,7 +2,8 @@
     include 'header.php';
     require_once 'connection.php';
     $sql = "select * from baiviet";
-    $result = mysqli_query($connection, $sql);
+    $stmt = $db->query($sql);
+    $result = $stmt->fetchAll();
 ?>
 <main class="container-fluid mt-3">
     <h3 class="text-center text-uppercase mb-3 text-primary">TOP bài hát yêu thích</h3>

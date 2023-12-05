@@ -2,15 +2,18 @@
     include '../header.php';
     require_once '../connection.php';
     $ma_bviet = $_GET['id'];
-    $sql2 = "select * from baiviet where ma_bviet = '$ma_bviet'";
-    $result2 = mysqli_query($connection, $sql2);
-    $each = mysqli_fetch_array($result2);
+    $sql2 = "select * from baiviet where ma_bviet = ?";
+    $stmt2 = $db->prepare($sql2);
+    $stmt2->execute([$ma_bviet]);
+    $each = $stmt2->fetch();
 
     $sql = "select * from theloai";
-    $theloai = mysqli_query($connection, $sql);
+    $stmt = $db->query($sql);
+    $theloai = $stmt->fetchAll();
 
     $sql1 = "select * from tacgia";
-    $tacgia = mysqli_query($connection, $sql1);
+    $stmt1 = $db->query($sql1);
+    $tacgia = $stmt1->fetchAll();
 ?>
 <main class="container mt-5 mb-5">
     <!-- <h3 class="text-center text-uppercase mb-3 text-primary">CẢM NHẬN VỀ BÀI HÁT</h3> -->

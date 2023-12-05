@@ -3,10 +3,10 @@
     require '../connection.php';
     include '../header.php';
     $id = $_GET['id'];
-    $sql = "select * from tacgia where ma_tgia = '$id'";
-    $result = mysqli_query($connection, $sql);
-    $each = mysqli_fetch_array($result);
-
+    $sql = "select * from tacgia where ma_tgia = ?";
+    $stmt = $db->prepare($sql);
+    $stmt->execute([$id]);
+    $each = $stmt->fetch();
 ?>
 <main class="container mt-5 mb-5">
     <!-- <h3 class="text-center text-uppercase mb-3 text-primary">CẢM NHẬN VỀ BÀI HÁT</h3> -->

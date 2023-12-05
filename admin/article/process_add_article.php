@@ -9,7 +9,7 @@
     $ma_tgia = $_POST['ma_tgia'];
     $hinhanh = $_POST['hinhanh'];
 
-    $sql = "insert into baiviet(tieude, ten_bhat, ma_tloai, tomtat, noidung, ma_tgia, hinhanh) values('$tieude','$ten_bhat','$ma_tloai',
-            '$tomtat','$noidung','$ma_tgia', '$hinhanh')";
-    mysqli_query($connection, $sql);
+    $sql = "insert into baiviet(tieude, ten_bhat, ma_tloai, tomtat, noidung, ma_tgia, hinhanh) values(?, ?, ?, ?, ?, ?, ?)";
+    $stmt = $db->prepare($sql);
+    $stmt->execute([$tieude, $ten_bhat, $ma_tloai, $tomtat, $noidung, $ma_tgia, $hinhanh]);
     header('location:index.php');

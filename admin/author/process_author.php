@@ -7,9 +7,9 @@
 
     $sql = "update tacgia 
     set
-    ten_tgia = '$name',
-    hinh_tgia = '$photo'
-    where ma_tgia = $id";
-
-    mysqli_query($connection, $sql);
+    ten_tgia = ?,
+    hinh_tgia = ?
+    where ma_tgia = ?";
+    $stmt = $db->prepare($sql);
+    $stmt->execute([$name, $photo, $id]);
     header('location:index.php');

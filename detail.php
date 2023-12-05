@@ -28,9 +28,21 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="./">Trang chủ</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./login.php">Đăng nhập</a>
-                    </li>
+                    <?php session_start(); ?>
+                    <?php if(isset($_SESSION['id'])): ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./signout.php">
+                                <?php echo $_SESSION['name'] ?>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./signout.php">Đăng xuất</a>
+                        </li>
+                    <?php else: ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./login.php">Đăng nhập</a>
+                        </li>
+                    <?php endif; ?>
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Nội dung cần tìm" aria-label="Search">
@@ -47,7 +59,8 @@
     $sql = "select baiviet.*, theloai.ten_tloai as tentl, tacgia.ten_tgia as tentg from baiviet 
             inner join theloai on baiviet.ma_tloai = theloai.ma_tloai
             inner join tacgia on tacgia.ma_tgia = baiviet.ma_tgia where ma_bviet = '$id'";
-    $result = mysqli_query($connection, $sql);
+    $stmt = $db->query($sql);
+    $result = $stmt->fetchAll();
 ?>
 <main class="container mt-5">
     <!-- <h3 class="text-center text-uppercase mb-3 text-primary">CẢM NHẬN VỀ BÀI HÁT</h3> -->

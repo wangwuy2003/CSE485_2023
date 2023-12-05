@@ -2,10 +2,12 @@
     include '../header.php';
     require_once '../connection.php';
     $sql = "select * from theloai";
-    $result = mysqli_query($connection, $sql);
+    $stmt = $db->query($sql);
+    $result = $stmt->fetchAll();
 
     $sql1 = "select * from tacgia";
-    $result1 = mysqli_query($connection, $sql1);
+    $stmt1 = $db->query($sql1);
+    $result1 = $stmt1->fetchAll();
 ?>
 <main class="container mt-5 mb-5">
     <!-- <h3 class="text-center text-uppercase mb-3 text-primary">CẢM NHẬN VỀ BÀI HÁT</h3> -->

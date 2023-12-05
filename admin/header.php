@@ -38,6 +38,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="../article">Bài viết</a>
                     </li>
+                    <?php session_start() ?>
+                    <?php if(isset($_SESSION['id'])): ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../signout.php">Đăng xuất</a>
+                        </li>
+                    <?php endif ?>
                 </ul>
             </div>
         </div>

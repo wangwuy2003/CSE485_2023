@@ -11,9 +11,9 @@
     $hinhanh = $_FILES['hinhanh'];
 
     $target_dir = "songs/";
-    $target_file = $target_dir . basename($_FILES["hinhanh"]["name"]);
+    $target_file = $target_dir.basename($_FILES["hinhanh"]["name"]);
     if (move_uploaded_file($_FILES["hinhanh"]["tmp_name"], $target_file)) {
-        echo "The file ". htmlspecialchars( basename( $_FILES["hinhanh"]["name"])). " has been uploaded.";
+        echo "The file ".htmlspecialchars(basename($_FILES["hinhanh"]["name"]))." has been uploaded.";
     } else {
         echo "Sorry, there was an error uploading your file.";
     }
@@ -26,18 +26,16 @@
 //
 //    move_uploaded_file($photo["tmp_name"], $path_file);
 
-    $sql = "update baiviet 
-    set
-    tieude = '$tieude',
-    ten_bhat = '$ten_bhat',
-    ma_tloai = '$ma_tloai',
-    tomtat = '$tomtat',
-    noidung = '$noidung',
-    ma_tgia = '$ma_tgia',
-    hinhanh = '$target_file'
-    where ma_bviet = '$ma_bviet'";
-
-    mysqli_query($connection, $sql);
-
+    $sql = "update baiviet set
+    tieude = ?,
+    ten_bhat = ?,
+    ma_tloai = ?,
+    tomtat = ?,
+    noidung = ?,
+    ma_tgia = ?,
+    hinhanh = ?
+    where ma_bviet = ?";
+    $stmt = $db->prepare($sql);
+    $stmt->execute([$tieude, $ten_bhat, $ma_tloai, $tomtat, $noidung, $ma_tgia, $target_file, $ma_bviet]);
     header('location:index.php');
 

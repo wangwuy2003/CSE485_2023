@@ -3,9 +3,9 @@
 
     $id = $_GET['id'];
 
-    $sql = "delete from theloai where ma_tloai = $id";
-
-    mysqli_query($connection, $sql);
+    $sql = "delete from theloai where ma_tloai = ?";
+    $stmt = $db->prepare($sql);
+    $stmt->execute([$id]);
 
     header('location:index.php');
 

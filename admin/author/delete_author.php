@@ -3,8 +3,8 @@
 
     $id = $_GET['id'];
 
-    $sql = "delete from tacgia where ma_tgia = $id";
-
-    mysqli_query($connection, $sql);
+    $sql = "delete from tacgia where ma_tgia = ?";
+    $stmt = $db->prepare($sql);
+    $stmt->execute([$id]);
 
     header('location:index.php');

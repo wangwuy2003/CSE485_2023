@@ -1,4 +1,6 @@
 <?php
-    $connection = mysqli_connect('localhost', 'root', '123123', 'btth01_cse485');
-    mysqli_set_charset($connection, 'utf8');
 
+    $conn =  new PDO ("mysql:host=localhost; dbname=btth01_cse485","root","123123");
+
+
+?>
